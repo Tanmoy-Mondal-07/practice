@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>register</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/common.css'>
+    <script src='common.js'></script>
+</head>
+<body>
+  <header id="hkj">
+    <img src=../css/pic/bars-solid.svg class="br" id="menu">
+    <section id="sidenav">
+        <ul>
+            <li> <a href="font.html"><i class="fa fa-home"></i>Home</a></li>
+            <li> <a href="#"><i class="fa fa-home"></i>Cart</a></li>
+            <li> <a href="#"><i class="fa fa-home"></i>About us</a></li>
+            <li> <a href="#"><i class="fa fa-home"></i>Contact</a></li>
+            <li> <a id="login"><i class="fa fa-home"></i>Login</a></li>
+        </ul>
+    </section>
+</header>
+<header id="mu">
+    <main class="grid">
+      <dev class="nav">
+        <h1>Books</h1>
+      </dev>
+    <dev class="top">
+        <img src="css/01.jpg">
+    </dev>
+    <dev class="mid">
+        <h2>The strange life of nikola tesla</h2><br>
+        <button class="by" id="bt">Buy</button><br>
+        <button class="cr" id="bt">Add to Cart</button>
+    </dev>
+    <div class="about">
+        <h3>About the book</h3>
+        <article>
+            In the future world where technology has reached unimaginable heights, society is no longer united.
+        </article>
+        <a># nikola tesla</a>
+    </div>
+    <div class="chat">
+      <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">1 star</label>
+      </div>
+      <div class="inbox">
+        <input type="text" placeholder="inbox">
+      </div>
+      <button>submit</button>
+    </div>
+    <div class="end">
+      <a>about us,</a><a>contact,</a><a>report,</a><br>
+      <a>home</a><a>,curt</a>
+    </div>
+
+    </main>
+    <script type="text/javascript">
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn =>{
+          btn.addEventListener('click', function(e){
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clientY - e.target.offsetTop;
+    
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this.appendChild(ripples);
+    
+            setTimeout(() => {
+              ripples.remove()
+            },1000);
+          })
+        })
+      </script>
+      </header>
+        <i class="fa fa-bars" class="br" id="menu"></i>
+        <section id="sidenav">
+            <ul>
+                <li> <a href="../font.html"><i class="fa fa-home"></i>Home</a></li>
+                <li> <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a></li>
+                <li> <a href="#"><i class="fa fa-info-circle"></i>About us</a></li>
+                <li> <a href="#"><i class="fa fa-envelope-open"></i>Contact</a></li>
+                <li> <a id="login"><i class="fa fa-sign-in"></i>Login</a></li>
+            </ul>
+        </section>
+    <script type="text/javascript">
+      var mu=document.getElementById("mu");
+      var menu=document.getElementById("menu");
+      var sidenav=document.getElementById("sidenav");
+      mu.onclick=function(){
+          if (sidenav.style.width=="250px") {
+              sidenav.style.width ="0px";
+      }
+      }
+      sidenav.style.width="0px";
+      menu.onclick=function(){
+          if (sidenav.style.width=="0px") {
+              sidenav.style.width ="250px";
+      }
+      else{
+          sidenav.style.width ="0px";
+      }
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-color: #040d15;
+    /* background:
+    linear-gradient(rgb(1, 0, 26), transparent),
+    linear-gradient(to top left, rgb(0, 0, 0), transparent),
+    linear-gradient(to top right, rgb(0, 0, 0), transparent);
+    background-blend-mode: screen;*/
+}
+.grid{
+    display: grid;
+    /* place-items: center; */
+    grid-template-areas: 
+    'six'
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+    padding-block: 0;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+@media (min-width: 15cm){
+    .grid{
+        grid-template-areas:
+        'six six six'
+        'one two two'
+        'three three three'
+        'four four four'
+        'five five five';
+    }
+}
+.nav{
+    grid-area: six;
+    margin-top: -8px;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(71, 83, 100);
+    box-shadow:10vmax 0px 0px rgb(71, 83, 100),
+-10vmax 0px 0px rgb(71, 83, 100);
+}
+.nav h1{
+    margin-top: 3px;
+    margin-left: 5%;
+}
+.top{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top img{
+    align-items: center;
+    width: 200px;
+    aspect-ratio: 1 / 1.4;
+}
+.mid{
+    margin-top: 100px;
+    padding-left: 20px;
+}
+.mid h2{
+    color: white;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.mid button{
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-transform: none;
+    font-size: 28px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    width: 500px;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+.by{
+    background: linear-gradient(90deg,#0162c8,#55e7fc);
+}
+.by:hover{
+    background: linear-gradient(90deg,#023974,#017586);
+}
+.cr{
+    background: linear-gradient(90deg,#2f0199,#db089cb2);
+}
+.cr:hover{
+    background: linear-gradient(90deg,#2f019973,#db089c3a);
+}
+.about{
+    letter-spacing: .2px;
+    color: white;
+    margin-top: 100px;
+    grid-area: three;
+}
+.about a{
+    padding: 0px 5px 0px 5px;
+    font-size: 12px;
+    border: solid 1px white;
+    cursor: default;
+}
+.about a:hover{
+    border: inset 1px black;
+}
+span{
+    position: absolute;
+    filter: drop-shadow(4px 4px 10px rgba(255, 255, 255, 0.288));
+box-shadow: inset 10px 10px 10px rgba(0,0,0,0.5),
+15px 25px 10px rgba(0,0,0,0.5),
+15px 20px 20px rgba(0,0,0,0.5),
+inset -10px -10px 15px rgba(255, 255, 255, 0.226);
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        width: 0px;
+        height: 0px;
+        opacity: 0.8;
+    }
+    100%
+    {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+.chat{
+    display: flex;
+    padding-left: 5%;
+    overflow: hidden;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    margin-top: 40px;
+    grid-area: four;
+    height: 200px;
+    width: 85%;
+    background: black;
+    box-shadow:20vmax 0px 0px black,
+-10vmax 0px 0px black;
+}
+.end {
+    margin-top: 80px;
+    height: 2px;
+    width: 100%;
+    box-shadow:0vmax -50px 0px rgba(53, 49, 1, 0.616);
+    background-color: transparent;
+    grid-area: five;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.342);
+    margin-bottom: 50px;
+}
+.end a{
+    cursor: default;
+    margin-top: 40px;
+    text-decoration: underline;
+}
+.end a:hover{
+    color: white;
+}
+#menu{
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.61);
+    cursor: pointer;
+}
+#sidenav{
+    padding: 100px 0px;
+    position: fixed;
+    width: 0px;
+    height: 100vh;
+    background:rgb(71, 83, 100);
+    backdrop-filter: blur(10px);
+    box-shadow:inset 10px 10px 10px grey;
+    top: 0;
+    right: 0;
+    transition: 0.4s;
+}
+#sidenav ul li{
+    list-style: none;
+    padding-left: 0px;
+}
+#sidenav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin: 0px 0;
+    display: block;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+#sidenav ul li a:hover{
+    background: rgba(255,255,255,0.4);
+    transition: 0.4%;
+    box-shadow: 6.0px 6.0px 6.0px -2.0px rgba(0,0,0,0.15),
+    inset 3px 3px 2px rgba(255,255,255,0.75),
+    -3px -3px 7px rgba(255,255,255,0.55),
+    inset -0.2px -0.2px 2.0px rgba(0,0,0,0.2);
+}
+#sidenav ul li a i{
+    font-size: 15px;
+    padding-right: 10px;
+    color: #110016bb;
+}
+#hkj img{
+    margin-top: 2px;
+    height: 35px;
+    z-index: 3;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+.inbox input{
+margin-left: 5%;
+width: 80vmax;
+flex-grow: 8;
+height: 80px;
+}
+.chat button{
+    margin-top: 20px;
+}
+.chat button:hover{
+    background: rgba(255, 255, 255, 0.233);
+}

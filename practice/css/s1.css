@@ -159,34 +159,6 @@ header{
     left: 33%;
     z-index: 2;
 }
-.login_form_container::before{
-    
-    position: absolute;
-    width: 170%;
-    height: 170%;
-    content: '';
-    background-image: conic-gradient(transparent, transparent, transparent, rgba(253,210,82, 0.6));
-    animation: rotate_border 6s linear infinite;
-
-}
-.login_form_container::after{
-    
-    position: absolute;
-    width: 170%;
-    height: 170%;
-    content: '';
-    background-image: conic-gradient(transparent, transparent, transparent, rgb(148,145,130));
-    animation: rotate_border 6s linear infinite;
-    animation-delay: -3s;
-}
-@keyframes rotate_border{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
 .login_form{
     position: absolute;
     content: '';

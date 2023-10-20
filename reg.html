@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>register</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/reg.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+  <main>
+    <img src="frm/01.png" class="slide" alt="">
+    <img src="frm/02.png" class="slide" alt="">
+    <img src="frm/03.png" class="slide" alt="">
+    <img src="frm/04.png" class="slide" alt="">
+    <img src="frm/05.png" class="slide" alt="">
+    <img src="frm/06.png" class="slide" alt="">
+    <img src="frm/07.png" class="slide" alt="">
+    <img src="frm/08.png" class="slide" alt="">
+    <img src="frm/09.png" class="slide" alt="">
+    <img src="frm/10.png" class="slide" alt="">
+    <img src="frm/11.png" class="slide" alt="">
+    <img src="frm/12.png" class="slide" alt="">
+    <img src="frm/13.png" class="slide" alt="">
+    <img src="frm/14.png" class="slide" alt="">
+    <img src="frm/15.png" class="slide" alt="">
+    <img src="frm/16.png" class="slide" alt="">
+    <script>
+        const slides = document.querySelectorAll(".slide")
+        var counter = 0;
+        slides.forEach(
+          (slide, index) => {
+            slide.style.left = `${index*100}%`
+          }
+        )
+        const gonex = setInterval(() => {
+          if(counter<="14"){
+            counter++;
+            slideImage();
+          }
+          else{
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            counter--;
+            slideImage();
+          }
+        }, 65)
+        const slideImage = () => {
+          slides.forEach(
+            (slide) => {
+              slide.style.transform = `translateX(-${counter * 100}%)`
+            }
+          )
+        }
+      </script>
+</main>
+    <div class="reg">
+        <h2>Register</h2>
+        <div class="name">
+          <input
+            type="text"
+            placeholder="Name"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="email">
+            <input
+              type="text"
+              placeholder="Emailid"
+              class="input_text"
+              autocomplete="off"
+            />
+          </div>
+        <div class="pass">
+          <input
+            type="password"
+            placeholder="Password"
+            class="input_text"
+            autocomplete="off"
+          />
+        </div>
+        <div class="ft">
+            <a>SingUp</a>
+            <a href="font.html">Back</a>
+          </div>
+</body>
+</html>
